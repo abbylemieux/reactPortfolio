@@ -5,14 +5,14 @@ const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState({});
 
-  // Function to handle form submission
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length === 0) {
-      // Form is valid, submit the data
+
       console.log('Form submitted:', formData);
-      // Reset the form after submission if desired
+  
       setFormData({ name: '', email: '', message: '' });
       setErrors({});
     } else {
@@ -20,13 +20,13 @@ const Contact = () => {
     }
   };
 
-  // Function to handle form field changes
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Function to validate form fields
+
   const validateForm = () => {
     const validationErrors = {};
     if (!formData.name) validationErrors.name = 'Name is required';

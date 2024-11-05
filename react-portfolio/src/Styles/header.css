@@ -15,9 +15,9 @@
 }
 
 .header-title {
-  font-size: 2rem; /* Increased font size for title */
+  font-size: 2rem; 
   font-weight: bold;
-  color: #7c77b9; /* Purple-Blue for title */
+  color: #7c77b9; 
 }
 
 .nav-tabs {
@@ -26,12 +26,12 @@
 }
 
 .nav-link {
-  color: #1d8a99; /* Teal for nav links */
+  color: #1d8a99;
   text-decoration: none;
   font-size: 1rem;
 }
 
 .nav-link:hover {
-  color: #14fff7; /* Bright Aqua on hover */
+  color: #14fff7;
   text-decoration: underline;
 }

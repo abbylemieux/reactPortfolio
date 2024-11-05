@@ -1,0 +1,53 @@
+.resume-container {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 1.5rem;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #7c77b9;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #1d8a99;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #7c77b9;
+    padding-bottom: 0.5rem;
+  }
+  
+  .resume-section {
+    margin-bottom: 2rem;
+  }
+  
+  .project {
+    margin-bottom: 1.5rem;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    padding-left: 0.5rem;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  strong {
+    color: #333;
+  }
+  

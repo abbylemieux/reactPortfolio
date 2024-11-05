@@ -1,10 +1,88 @@
-import React from 'react';
+import React, { useState } from 'react';
+import '/src/Styles/Contact.css';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [errors, setErrors] = useState({});
+
+  // Function to handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length === 0) {
+      // Form is valid, submit the data
+      console.log('Form submitted:', formData);
+      // Reset the form after submission if desired
+      setFormData({ name: '', email: '', message: '' });
+      setErrors({});
+    } else {
+      setErrors(validationErrors);
+    }
+  };
+
+  // Function to handle form field changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Function to validate form fields
+  const validateForm = () => {
+    const validationErrors = {};
+    if (!formData.name) validationErrors.name = 'Name is required';
+    if (!formData.email) {
+      validationErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      validationErrors.email = 'Email is not valid';
+    }
+    if (!formData.message) validationErrors.message = 'Message is required';
+    return validationErrors;
+  };
+
   return (
     <div>
       <h1>Contact</h1>
-      <p>This is the Contact page. Provide your contact information or a contact form here.</p>
+      <form onSubmit={handleSubmit} className="contact-form">
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            className={errors.name ? 'error' : ''}
+          />
+          {errors.name && <span className="error-message">{errors.name}</span>}
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className={errors.email ? 'error' : ''}
+          />
+          {errors.email && <span className="error-message">{errors.email}</span>}
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            className={errors.message ? 'error' : ''}
+          ></textarea>
+          {errors.message && <span className="error-message">{errors.message}</span>}
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 };

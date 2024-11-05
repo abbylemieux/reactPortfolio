@@ -1,0 +1,37 @@
+/* Header.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #8fbfe0; /* Light Blue for header background */
+  color: #0bc9cd; /* Aqua for text */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+  font-size: 2rem; /* Increased font size for title */
+  font-weight: bold;
+  color: #7c77b9; /* Purple-Blue for title */
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: #1d8a99; /* Teal for nav links */
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  color: #14fff7; /* Bright Aqua on hover */
+  text-decoration: underline;
+}

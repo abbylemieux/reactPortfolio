@@ -1,0 +1,68 @@
+/* Contact.css */
+
+.contact-form {
+  max-width: 500px;
+  margin: 80px auto; /* Adjusted margin to avoid overlap with fixed header */
+  padding: 1.5rem;
+  background-color: #8fbfe0; /* Light Blue form background */
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #1d8a99; /* Teal for labels */
+}
+
+input,
+textarea {
+  padding: 0.5rem;
+  border: 1px solid #0bc9cd; /* Aqua border */
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #f5f5f5; /* Light background for input fields */
+  color: #333;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #14fff7; /* Bright Aqua focus border */
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+button {
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #7c77b9; /* Purple-Blue button */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #14fff7; /* Bright Aqua on hover */
+}
+
+.error {
+  border-color: #1d8a99; /* Teal border for error */
+}
+
+.error-message {
+  color: #1d8a99; /* Teal error text */
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}

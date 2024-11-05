@@ -2,6 +2,10 @@
 
 ![image](https://github.com/user-attachments/assets/bbdce38b-f369-4f1a-8e62-ed646520dbc8)
 
+Video:
+https://drive.google.com/file/d/19eN3aH1PtniEhD_o7AjVgbJSr3jog9Ni/view
+
+
 This is a personal portfolio application showcasing projects, skills, and experience. Built to highlight expertise and provide visitors with an engaging overview of accomplishments.
 
 ## Table of Contents
